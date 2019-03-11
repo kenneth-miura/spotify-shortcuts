@@ -3,3 +3,7 @@ __pycache__/
 
 #vs-code specifics
 .vscode/
+
+#ignore configs
+.cache*
+spotify-config.json
