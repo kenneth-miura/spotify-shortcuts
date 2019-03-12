@@ -1,0 +1,6 @@
+{
+    "spotify client id": "your-client-id-here",
+    "spotify client secret": "your-client-secret-here",
+    "spotify redirect url": "your-redirect-url-here",
+    "username": "your-spotify-username-here"
+}
