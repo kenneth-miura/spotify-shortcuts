@@ -25,7 +25,6 @@ ACTION_KEY_INDEX = 1
 for i in range(len(ALL_COMBINATIONS)):
     # assumes the combination lists indices have identical action keys
     ACTION_KEYS.append(ALL_COMBINATIONS[i][0][ACTION_KEY_INDEX])
-print(ACTION_KEYS)
 
 # meant to keep from running multiple commands at once
 spotify_command_running = False

@@ -1,7 +1,6 @@
 import json
 import spotipy
 import spotipy.util as util
-# note: you must install spotipy manually (don't use pip) https://github.com/plamere/spotipy/issues/211#issuecomment-369863112
 
 
 class SpotifyController:
