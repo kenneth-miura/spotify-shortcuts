@@ -1,5 +1,14 @@
 # spotify-shortcuts
-Adds shortcuts for controlling spotify which run in the background. Meant to run through the terminal. Need to fill in your own spotify client information to spotify-config.json. Will figure out way to store client id, secret, & redirect url seperate from username so the only required config is username.
+Adds shortcuts for controlling spotify which run in the background. Meant to run through the terminal. 
+
+#Set up
+
+set:
+    SPOTIPY_CLIENT_ID,
+    SPOTIPY_CLIENT_SECRET,
+    SPOTIPY_REDIRECT_URL,
+    to corresponding info from the spotify developer dashboard. Set as env variables. 
+Set SPOTIFY_USERNAME to your spotify username
 
 # dependencies
 pynput

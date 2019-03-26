@@ -1,22 +1,32 @@
 import json
 import spotipy
 import spotipy.util as util
+import spotipy.oauth2 as oauth2
+import os
 
 
 class SpotifyController:
     def __init__(self):
         self.playlist_url_offset = 10
-        with open('spotify-config.json') as json_file:
-            config = json.load(json_file)
-            self.client_id = config["spotify client id"]
-            self.client_secret = config["spotify client secret"]
-            self.redirect_url = config["spotify redirect url"]
-            self.username = config["username"]
 
-            self.scope = 'user-read-playback-state playlist-read-private playlist-modify-public playlist-modify-private user-read-currently-playing user-modify-playback-state'
-            auth_token = util.prompt_for_user_token(self.username, self.scope, self.client_id,
-                                                    self.client_secret, self.redirect_url)
-            self.client = spotipy.Spotify(auth_token)
+        self.client_id = os.getenv('SPOTIPY_CLIENT_ID')
+        self.client_secret = os.getenv('SPOTIPY_CLIENT_SECRET')
+        self.redirect_url = os.getenv('SPOTIPY_REDIRECT_URL')
+        self.username = os.getenv('SPOTIFY_USERNAME')
+        if not self.client_id:
+            raise oauth2.SpotifyOauthError('No client id set as env variable')
+        if not self.client_secret:
+            raise oauth2.SpotifyOauthError('No client secret as env variable')
+        if not self.redirect_url:
+            raise oauth2.SpotifyOauthError(
+                'No client redirect url as env variable')
+        if not self.username:
+            raise oauth2.SpotifyOauthError('No username as env variable')
+
+        self.scope = 'user-read-playback-state playlist-read-private playlist-modify-public playlist-modify-private user-read-currently-playing user-modify-playback-state'
+        auth_token = util.prompt_for_user_token(self.username, self.scope, self.client_id,
+                                                self.client_secret, self.redirect_url)
+        self.client = spotipy.Spotify(auth_token)
 
     def next_track(self):
         if self.client:
