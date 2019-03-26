@@ -1,5 +1,5 @@
 # spotify-shortcuts
-Picking Python back up. Adds shortcuts for controlling spotify which run in the background. Meant to run through the terminal. 
+Adds shortcuts for controlling spotify which run in the background. Meant to run through the terminal. Need to fill in your own config information to spotify-config.json
 
 # dependencies
 pynput
