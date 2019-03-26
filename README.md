@@ -3,12 +3,8 @@ Adds shortcuts for controlling spotify which run in the background. Meant to run
 
 #Set up
 
-set:
-    SPOTIPY_CLIENT_ID,
-    SPOTIPY_CLIENT_SECRET,
-    SPOTIPY_REDIRECT_URL,
-    to corresponding info from the spotify developer dashboard. Set as env variables. 
-Set SPOTIFY_USERNAME to your spotify username
+set SPOTIPY_CLIENT_ID,SPOTIPY_CLIENT_SECRET, and SPOTIPY_REDIRECT_URL to corresponding info from the spotify developer dashboard. Set as environment variables. 
+Set SPOTIFY_USERNAME to your spotify username.
 
 # dependencies
 pynput
