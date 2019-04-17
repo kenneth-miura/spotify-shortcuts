@@ -1,7 +1,7 @@
 # spotify-shortcuts
-Adds shortcuts for controlling spotify which run in the background. Meant to run through the terminal. 
+Refamiliarizing myself with Python. Project adds shortcuts for controlling spotify which run in the background. Meant to run through the terminal. 
 
-#Set up
+# Set up
 
 set SPOTIPY_CLIENT_ID,SPOTIPY_CLIENT_SECRET, and SPOTIPY_REDIRECT_URL to corresponding info from the spotify developer dashboard. Set as environment variables. 
 Set SPOTIFY_USERNAME to your spotify username.
